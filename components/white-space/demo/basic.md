@@ -7,11 +7,16 @@ title: 基本
 
 
 ````jsx
+import WhiteSpace from 'lib/white-space'
+import 'lib/white-space/style'
+
 const WhiteSpaceExample = React.createClass({
   render() {
     return (
       <div className="button-container">
+        <WhiteSpace />
         Hello
+        <WhiteSpace />
       </div>
     );
   },

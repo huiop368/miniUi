@@ -6,6 +6,8 @@ import { createHashHistory } from 'history'
 import App          from '../components/App'
 import Page         from '../components/Page'
 
+import './base.scss'
+
 const hashHistory = useRouterHistory(createHashHistory)()
 
 const MOUNT_NODE = document.getElementById('main')

@@ -1,8 +1,8 @@
 import React, { Component, PropTypes }  from 'react'
 import classnames                       from 'classnames'
 
-const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
-const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
+const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/
+const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar)
 
 function isString(str) {
     return 'string' === typeof str
@@ -12,15 +12,15 @@ function isString(str) {
 function insertSpace(child) {
     if (isString(child.type) && isTwoCNChar(child.props.children)) {
         return React.cloneElement(child, {},
-                              child.props.children.split('').join(' '));
+                              child.props.children.split('').join(' '))
     }
     if (isString(child)) {
         if (isTwoCNChar(child)) {
-            child = child.split('').join(' ');
+            child = child.split('').join(' ')
         }
-        return <span>{child}</span>;
+        return <span>{child}</span>
     }
-    return child;
+    return child
 }
 
 
