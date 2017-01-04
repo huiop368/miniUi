@@ -1,0 +1,20 @@
+.main_container{
+    min-height : 500px;
+    margin: 0 40px;
+    background-color: #fff;
+    padding-top : 20px;
+    border-radius : 5px;
+
+    .sider_bar{
+        float : left;
+        width : 220px;
+        background-color : #fff;
+    }
+
+    .container{
+        padding :0 20px 10px 0;
+        border-left : 1px solid #efefef;
+        padding-left :20px;
+        overflow : hidden;
+    }
+}

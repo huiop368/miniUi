@@ -1,0 +1,46 @@
+.t-button{
+    width: 100%;
+    display: inline-block;
+    outline: 0 none;
+    appearance: none;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    font-size: 18px;
+    height: 42px;
+    line-height: 42px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-clip: padding-box;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+
+    &:active{
+        background-color : #eee;   
+    }
+}
+
+.t-button-primary{
+    color: #fff;
+    background-color: #108ee9;
+    border: 1px solid #108ee9;
+
+    &:active{
+        
+    }
+}
+
+.t-button-small{
+
+}
+
+.t-button-disabled{
+    
+}
+
+.t-button-inline{
+    
+}

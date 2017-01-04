@@ -1,0 +1,11 @@
+.DS_STORE
+*.log
+
+node_modules
+
+_data
+_site
+dist
+coverage
+
+.idea/

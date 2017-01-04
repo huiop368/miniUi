@@ -1,0 +1,46 @@
+import React, {Component} from 'react'
+import { IndexLink, Link } from 'react-router'
+import Searchbox            from 'components/Searchbox'
+import classnames           from 'classnames'
+import classes from './Header.scss'
+
+
+export default class Header extends Component {
+    
+    render (){
+        const { location : {pathname} } = this.props
+
+        const reactClass = classnames({
+            [classes.nav_item_active] : /(docs)?\/(components|react)/.test(pathname)
+        })
+
+        const designClass = classnames({
+            [classes.nav_item_active] : /docs\/design/.test(pathname)
+        })
+
+        return (
+            <div className={classes.header}>
+                <div className={classes.logo}>
+                    <h1>Logo</h1>
+                </div>
+                <div>
+                    <Searchbox />
+                    <ul className={classes.nav_bar}>
+                        <li className={classes.nav_item}>
+                            <IndexLink to='/' activeClassName={classes.nav_item_active}>
+                              首页
+                            </IndexLink>        
+                        </li>
+                        <li className={classes.nav_item}>
+                            <Link to='/docs/react/introduce' className={reactClass}>组件</Link>
+                        </li>
+                        <li className={classes.nav_item}>
+                            <Link to='/docs/design/color' className={designClass}>设计</Link>
+                        </li>
+                    </ul>
+                    
+                </div>
+              </div>                  
+        )
+    }
+}
