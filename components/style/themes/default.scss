@@ -39,16 +39,16 @@ $border-color-base: #ddd;
 
 // 字体尺寸
 // ---
-$font-size-icontext: 20px;
-$font-size-caption-sm: 24px;
-$font-size-base: 26px;
-$font-size-subhead: 28px;
-$font-size-caption: 30px;
-$font-size-heading: 34px;
-$font-size-display-sm: 36px;
-$font-size-display-md: 42px;
-$font-size-display-lg: 48px;
-$font-size-display-xl: 60px;
+$font-size-icontext: 10px;
+$font-size-caption-sm: 12px;
+$font-size-base: 13px;
+$font-size-subhead: 14px;
+$font-size-caption: 15px;
+$font-size-heading: 17px;
+$font-size-display-sm: 18px;
+$font-size-display-md: 21px;
+$font-size-display-lg: 24px;
+$font-size-display-xl: 30px;
 
 // 字体家族
 // ---
@@ -57,10 +57,10 @@ $font-family-code: Consolas,Menlo,Courier,monospace;
 
 // 圆角
 // ---
-$radius-xs: 4px;
-$radius-sm: 6px;
-$radius-md: 10px;
-$radius-lg: 14px;
+$radius-xs: 2px;
+$radius-sm: 3px;
+$radius-md: 5px;
+$radius-lg: 7px;
 
 // 边框尺寸
 // ---
@@ -71,28 +71,28 @@ $border-width-lg: 4px;
 // 间距
 // ---
 // 水平间距
-$h-spacing-sm: 12px;
-$h-spacing-md: 18px;
-$h-spacing-lg: 30px;
+$h-spacing-sm: 6px;
+$h-spacing-md: 9px;
+$h-spacing-lg: 15px;
 
 // 垂直间距
-$v-spacing-xs: 6px;
-$v-spacing-sm: 12px;
-$v-spacing-md: 18px;
-$v-spacing-lg: 30px;
-$v-spacing-xl: 42px;
+$v-spacing-xs: 3px;
+$v-spacing-sm: 6px;
+$v-spacing-md: 9px;
+$v-spacing-lg: 15px;
+$v-spacing-xl: 21px;
 
 // 高度
 // ---
-$option-height: 84px;           // action-sheet、picker 等组件的选项高度
+$option-height: 42px;           // action-sheet、picker 等组件的选项高度
 
 // 图标尺寸
 // ---
-$icon-size-xxs: 30px;
-$icon-size-xs: 36px;
-$icon-size-sm: 42px;
-$icon-size-md: 44px;       // 导航条上的图标、grid的图标大小
-$icon-size-lg: 72px;
+$icon-size-xxs: 15px;
+$icon-size-xs: 18px;
+$icon-size-sm: 21px;
+$icon-size-md: 22px;       // 导航条上的图标、grid的图标大小
+$icon-size-lg: 36px;
 
 // 动画缓动
 // ---
@@ -102,13 +102,13 @@ $ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 // ---
 
 // button
-$button-height: 84px;
-$button-font-size: 36px;
+$button-height: 42px;
+$button-font-size: 18px;
 
-$button-height-sm: 46px;
-$button-font-size-sm: 24px;
+$button-height-sm: 23px;
+$button-font-size-sm: 12px;
 
-$across-button-height: 100px;   // 通栏按钮高度
+$across-button-height: 50px;   // 通栏按钮高度
 
 $primary-button-fill: $brand-primary;
 $primary-button-fill-tap: $brand-primary-tap;
@@ -117,18 +117,18 @@ $ghost-button-color: $brand-primary;    // 同时应用于背景、文字颜色�
 $ghost-button-fill-tap: $brand-primary-tap;
 
 $link-button-fill-tap: #ddd;
-$link-button-font-size: 32px;
+$link-button-font-size: 16px;
 
 // list
-$list-title-height: 60px;
-$list-item-height-sm: 70px;
-$list-item-height: 90px;
+$list-title-height: 30px;
+$list-item-height-sm: 35px;
+$list-item-height: 45px;
 $list-body-border-width: 1PX;
 $list-body-border-color: $border-color-base;
 
 // input
-$input-label-width: 34px;       // InputItem、TextareaItem 文字长度基础值
-$input-font-size: 28px;
+$input-label-width: 17px;       // InputItem、TextareaItem 文字长度基础值
+$input-font-size: 14px;
 $input-color-icon: #ccc;
 $input-color-icon-tap: $brand-primary;
 $input-color-icon-inverse: rgba(255, 255, 255, .6);
@@ -136,32 +136,34 @@ $input-color-icon-tap-inverse: rgba(255, 255, 255, .4);
 
 // tabs
 $tabs-color: $brand-primary;
-$tabs-height: 84px;
-$tabs-font-size-heading: 30px;
+$tabs-height: 42px;
+$tabs-font-size-heading: 15px;
 
 // segmented-control
 $segmented-control-color: $brand-primary;  // 同时应用于背景、文字颜色、边框色
-$segmented-control-height: 54px;
+$segmented-control-height: 27px;
 $segmented-control-fill-tap: fade($brand-primary, 0.1);
 
 // tab-bar
-$tab-bar-height: 100px;
+$tab-bar-height: 50px;
 
 // search-bar
-$search-bar-input-height: 56px;
+$search-bar-input-height: 28px;
 
 // notice-bar
 $notice-bar-fill: #fffada;
-$notice-bar-height: 72px;
+$notice-bar-height: 36px;
 
 // switch
 $switch-fill: #4dd865;
 
 // tag
-$tag-height: 36px;
+$tag-height: 18px;
+$tag-height-sm: 14px;
+$tag-color: $brand-primary;
 
 // table
-$table-title-height: 60px;
+$table-title-height: 30px;
 
 // z-index
 $progressZIndex: 2000;

@@ -13,7 +13,7 @@ const ButtonExample = React.createClass({
   render() {
     return (<div className="btn-container">
       <div style={{ margin: '0 0.16rem' }}>
-        <Button>Normal</Button>
+        <Button data-id="007">Normal</Button>
         <Button type="primary">Primary</Button>
       </div>
     </div>);

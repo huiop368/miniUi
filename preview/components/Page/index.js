@@ -10,6 +10,7 @@ export default class Page extends Component {
 
         return (
             <div>
+                <style dangerouslySetInnerHTML={{ __html: doc.style }} />
                 {
                     React.cloneElement(doc.preview)
                 }

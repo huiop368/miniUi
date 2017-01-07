@@ -28,7 +28,7 @@ export default class Demo extends Component {
     }
 
     render (){
-        const { meta, pathname, intro, highlightedCode, preview, active } = this.props
+        const { meta, pathname, intro, highlightedCode, highlightedStyle, preview, active } = this.props
         const { expand } = this.state
 
         const highlightClass = classname({
@@ -63,6 +63,13 @@ export default class Demo extends Component {
                             <code className="javascript" dangerouslySetInnerHTML={{
                                 __html: highlightedCode,
                             }} />
+
+                            {
+                                highlightedStyle &&
+                                    <code className="javascript" dangerouslySetInnerHTML={{
+                                        __html: highlightedStyle,
+                                    }} />
+                            }
                         </pre>
                     </div>
                 </section>
