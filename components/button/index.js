@@ -55,7 +55,7 @@ export default class Button extends Component {
         const { children, type, htmlType, className, prefixCls, size, disabled, inline, loading, onClick, ...props } = this.props
 
         const allCls = classnames({
-            [className] : className,
+            [className] : !!className,
             [prefixCls] : true,
             [`${prefixCls}-primary`]: type === 'primary',
             [`${prefixCls}-small`]: size === 'small',
