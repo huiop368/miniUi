@@ -1,0 +1,36 @@
+@import '../../style/themes/default';
+
+.t-tabs {
+  overflow: hidden;
+  &-bar {
+    display: flex;
+    position: relative;
+    border-bottom: $border-width-sm solid $border-color-base;
+    .t-tabs-tab {
+      flex: 1;
+      text-align: center;
+      font-size: $tabs-font-size-heading;
+      height: $tabs-height;
+      line-height: $tabs-height;
+      color: $color-text-base;
+      background-color: $fill-base;
+      box-sizing: border-box;
+      &-active {
+        color: $tabs-color;
+        border-bottom : $border-width-md solid $tabs-color
+      }
+    }
+  }
+
+  &-content {
+    zoom: 1;
+
+    &-panel {
+      overflow: auto;
+    }
+  }
+
+  &-panel-inactive {
+      display : none;
+  }
+}

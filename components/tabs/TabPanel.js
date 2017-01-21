@@ -15,6 +15,7 @@ export default class TabPanel extends Component {
         const { children, active, prefixCls } = this.props
 
         const cls = classnames({
+            [`${prefixCls}-panel`] : true,
             [`${prefixCls}-panel-inactive`] : !active,
             [`${prefixCls}-panel-active`] : active 
         })
