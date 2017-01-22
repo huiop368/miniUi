@@ -1,6 +1,6 @@
 ---
 category: Components
-type: Data Entry
+type: UI Controls
 chinese: 按钮
 english: Button
 source: design

@@ -1,0 +1,35 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefix : t-accordion;
+
+.#{$prefix}{
+    
+    &-item{
+        .#{$prefix}-header{
+            position: relative;
+              color: $color-text-base;
+              font-size: $font-size-heading;
+              height: $list-item-height;
+              line-height: $list-item-height;
+              background-color: $fill-base;
+              box-sizing: content-box;
+              overflow: hidden;
+              padding-left: $h-spacing-lg;
+              padding-right: 2 * $h-spacing-lg;
+              @include hairline-bottom($border-color-base);
+              @include ellipsis();
+        }
+
+        .#{$prefix}-content{
+            overflow: auto;
+            transition : all .3s ease;
+            max-height : 0;
+        }
+
+        .#{$prefix}-content-active{
+            // 尽量设置了个较大的值，其实可以设置的更大
+            max-height : 800px;
+        }
+    }
+}

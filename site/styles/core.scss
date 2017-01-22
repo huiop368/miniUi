@@ -8,6 +8,8 @@
   // Just remove them if they're not what you want
   html {
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 
   html,
