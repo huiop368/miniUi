@@ -1,0 +1,32 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+.t-carousel {
+  position: relative;
+
+  &-wrap {
+    font-size: $font-size-display-sm;
+    color: $color-text-base;
+    background: none;
+    text-align: center;
+    zoom: 1;
+    width: 100%;
+    &-dot {
+      display: inline-block;
+      zoom: 1;
+      > span {
+        display: block;
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+        border-radius: 50%;
+        background: $input-color-icon;
+      }
+      &-active {
+        > span {
+          background: #888;
+        }
+      }
+    }
+  }
+}
