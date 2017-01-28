@@ -6,6 +6,8 @@ title: 搜索栏
 Search Bar
 
 ```jsx
+import SearchBar from 'lib/search-bar'
+import 'lib/search-bar/style'
 
 const SearchBarExample = React.createClass({
   onClick() {
@@ -13,9 +15,11 @@ const SearchBarExample = React.createClass({
   },
   render() {
     return (
-      <div>
-        Hello Search Bar~!      
-      </div>
+        <div>
+            <SearchBar />
+            <p style={{height:'20px'}}></p>
+            <SearchBar showCancelButton />
+        </div>
     );
   },
 });
