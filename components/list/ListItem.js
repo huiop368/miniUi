@@ -54,7 +54,7 @@ export default class ListItem extends Component {
             [`${prefixCls}-line-wrap`]: wrap
         })
 
-        const arrowCls = classNames({
+        const arrowCls = classnames({
             [`${prefixCls}-arrow`]: true,
             [`${prefixCls}-arrow-horizontal`]: arrow === 'horizontal',
             [`${prefixCls}-arrow-vertical`]: arrow === 'down' || arrow === 'up',
