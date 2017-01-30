@@ -9,6 +9,9 @@ List
 import List from 'lib/list'
 import 'lib/list/style'
 
+const Item = List.Item
+const Brief = List.Brief
+
 const ListExample = React.createClass({
   render() {
     return (

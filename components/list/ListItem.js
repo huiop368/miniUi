@@ -1,6 +1,10 @@
 import React, { Component, PropTypes, Children }  from 'react'
 import classnames                       from 'classnames'
 
+export const Brief = ({children, style}) => (
+    <div className="t-list-brief" style={style}>{children}</div>   
+)
+
 export default class ListItem extends Component {
 
     static propTypes = {
@@ -25,7 +29,9 @@ export default class ListItem extends Component {
     };
 
     get thumb(){
-        
+        const { thumb, prefixCls } = this.props
+
+        return !thumb ? null : <div className={`${prefixCls}-thumb`}>{'string' === typeof thumb ? <img src={thumb} /> : thumb }</div>
     }
 
     render (){
@@ -42,10 +48,27 @@ export default class ListItem extends Component {
             [`${prefixCls}-item-bottom`]: align === 'bottom'
         })
 
+        const lineCls = classnames({
+            [`${prefixCls}-line`]: true,
+            [`${prefixCls}-line-multiple`]: multipleLine,
+            [`${prefixCls}-line-wrap`]: wrap
+        })
+
+        const arrowCls = classNames({
+            [`${prefixCls}-arrow`]: true,
+            [`${prefixCls}-arrow-horizontal`]: arrow === 'horizontal',
+            [`${prefixCls}-arrow-vertical`]: arrow === 'down' || arrow === 'up',
+            [`${prefixCls}-arrow-vertical-up`]: arrow === 'up',
+        })
+
         return (
             <div className={allCls} {...props}>
                 {this.thumb}
-                <div>List Item</div>
+                <div className={lineCls}>
+                    { children ? <div className={`${prefixCls}-content`}>{children}</div> : null }
+                    { extra ? <div className={`${prefixCls}-extra`}>{extra}</div> : null }
+                    { arrow ? <div className={arrowCls} /> : null }
+                </div>
             </div>        
         )
     }

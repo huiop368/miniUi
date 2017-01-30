@@ -1,6 +1,6 @@
 import React, { Component, PropTypes, Children }  from 'react'
 import classnames   from 'classnames'
-import ListItem     from './ListItem'                         
+import ListItem, { Brief }     from './ListItem'                         
 
 export default class List extends Component {
 
@@ -13,7 +13,9 @@ export default class List extends Component {
         prefixCls   : 't-list'
     };
 
-    static item = ListItem;
+    static Item = ListItem;
+
+    static Brief = Brief;
 
     get header (){
         const { header, prefixCls } = this.props
