@@ -6,16 +6,29 @@ title: 基本
 滑动开关
 
 ```jsx
-const SwitchExample = React.createClass({
-  onClick() {
-    console.log('Hello');
-  },
+import Switch from 'lib/switch'
+import 'lib/switch/style'
+
+class SwitchExample extends React.Component {
+  constructor (props){
+    super(props)
+    this.state = {
+        checked : false    
+    }
+  }
+
+  onChange(checked) {
+      this.setState({checked : !checked})
+  }
+
   render() {
     return (
-        <div>Hello world</div>  
-    );
+        <div>
+            <Switch checked={this.state.checked} onChange={this.onChange} />
+        </div>  
+    )
   }
-});
+}
 
 ReactDOM.render(<SwitchExample />, mountNode);
 ```
