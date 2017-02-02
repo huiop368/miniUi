@@ -33,8 +33,10 @@ $prefixCls : t-stepper;
     }
 
     &-value{
-        padding : 0 20px;
+        display : inline-block;
+        width : 60px;
         vertical-align : middle;
         user-select : none;
+        text-align : center;
     }
 }
