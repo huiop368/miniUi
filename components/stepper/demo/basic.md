@@ -3,34 +3,29 @@ order: 0
 title: 基本
 ---
 
-滑动开关
+数字输入框。
 
 ```jsx
-import Switch from 'lib/switch'
-import 'lib/switch/style'
+import Stepper from 'lib/stepper'
+import 'lib/stepper/style'
 
-class SwitchExample extends React.Component {
+class StepperExample extends React.Component {
   constructor (props){
     super(props)
     this.state = {
         checked : false    
     }
-
     this.onChange = this.onChange.bind(this)
   }
-
   onChange(checked) {
       this.setState({checked : !this.state.checked})
   }
-
   render() {
     return (
-        <div>
-            <Switch checked={this.state.checked} onChange={this.onChange} />
-        </div>  
+        <Stepper />
     )
   }
 }
 
-ReactDOM.render(<SwitchExample />, mountNode);
+ReactDOM.render(<StepperExample />, mountNode);
 ```

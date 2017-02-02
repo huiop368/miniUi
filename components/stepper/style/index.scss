@@ -1,0 +1,40 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-stepper;
+
+.#{$prefixCls}{
+    &-hand-down,
+    &-hand-up{
+        display : inline-block;
+        width : 30px;
+        height : 30px;
+        line-height : 30px;
+        border : 1px solid #ccc;
+        border-radius : 30px;
+        text-align : center;
+    }
+
+    &-hand-down{
+       &:after{
+           content : '-'; 
+       } 
+    }
+
+    &-hand-up{
+       &:after{
+           content : '+'; 
+       }
+    }
+
+    &-hand-down-disabled,
+    &-hand-up-disabled{
+        opacity : .3;       
+    }
+
+    &-value{
+        padding : 0 20px;
+        vertical-align : middle;
+        user-select : none;
+    }
+}
