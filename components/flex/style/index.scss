@@ -1,0 +1,95 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls: t-flexbox;
+
+.#{$prefixCls} {
+  text-align: left;
+  overflow-y: hidden;
+  display: flex;
+  @include box-align();
+  &.#{$prefixCls}-dir-row {
+    @include flex-direction(row);
+  }
+  &.#{$prefixCls}-dir-row-reverse {
+    @include flex-direction(row-reverse);
+  }
+  &.#{$prefixCls}-dir-column {
+    @include flex-direction(column);
+  }
+  &.#{$prefixCls}-dir-column-reverse {
+    @include flex-direction(column-reverse);
+  }
+
+  &.#{$prefixCls}-nowrap {
+    @include flex-wrap(nowrap);
+  }
+  &.#{$prefixCls}-wrap {
+    @include flex-wrap(wrap);
+  }
+  &.#{$prefixCls}-wrap-reverse {
+    @include flex-wrap(wrap-reverse);
+  }
+
+  &.#{$prefixCls}-justify-start {
+    @include flex-justify(flex-start);
+  }
+  &.#{$prefixCls}-justify-end {
+    @include flex-justify(flex-end);
+  }
+  &.#{$prefixCls}-justify-center {
+    @include flex-justify(center);
+  }
+  &.#{$prefixCls}-justify-between {
+    @include flex-justify(space-between);
+  }
+  &.#{$prefixCls}-justify-around {
+    @include flex-justify(space-around);
+  }
+
+  &.#{$prefixCls}-align-top {
+    @include box-align(flex-start);
+  }
+  &.#{$prefixCls}-align-bottom {
+    @include box-align(flex-end);
+  }
+  &.#{$prefixCls}-align-middle {
+    @include box-align(center);
+  }
+  &.#{$prefixCls}-align-stretch {
+    @include box-align(stretch);
+  }
+  &.#{$prefixCls}-align-baseline {
+    @include box-align(baseline);
+  }
+
+  &.#{$prefixCls}-align-content-start {
+    @include box-align-content(flex-start);
+  }
+  &.#{$prefixCls}-align-content-end {
+    @include box-align(flex-end);
+  }
+  &.#{$prefixCls}-align-content-center {
+    @include box-align(center);
+  }
+  &.#{$prefixCls}-align-content-between {
+    @include box-align(stretch);
+  }
+  &.#{$prefixCls}-align-content-around {
+    @include box-align(baseline);
+  }
+  &.#{$prefixCls}-align-content-stretch {
+    @include box-align(baseline);
+  }
+
+
+  &-item {
+    @include box-sizing();
+    @include box-flex(1);
+    margin-left: $h-spacing-md;
+    min-width: 20px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
