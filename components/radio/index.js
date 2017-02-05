@@ -3,15 +3,17 @@ import classnames                       from 'classnames'
 
 import TtCheckbox   from '../_checkbox'
 
-export default class Checkbox extends Component {
+export default class Radio extends Component {
 
     static defaultProps = {
-        prefixCls : 't-checkbox'
-    }
+        prefixCls : 't-radio'   
+    };
 
     render (){
+        const props = {...this.props, type : 'radio'}
+
         return (
-            <TtCheckbox {...this.props} />        
-        )          
+            <TtCheckbox {...props} />
+        )
     }
 }
