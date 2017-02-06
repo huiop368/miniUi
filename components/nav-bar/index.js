@@ -28,7 +28,7 @@ export default class NavBar extends Component {
         })
 
         return (
-            <div className={allCls} style={style}>
+            <div className={allCls} style={style} {...props}>
                 <div className={`${prefixCls}-left`} onClick={onLeftClick}>
                     {iconName ? <span className={`${prefixCls}-left-icon`}></span> : null}
                     <span className={`${prefixCls}-left-content`}>{leftContent}</span>

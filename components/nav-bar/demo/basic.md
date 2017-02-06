@@ -13,7 +13,7 @@ class NavBarExample extends React.Component {
   render() {
     return (
         <div>
-            <NavBar>Title</NavBar>
+            <NavBar leftContent="返回" rightContent="寄件记录">Title</NavBar>
         </div>
     )
   }

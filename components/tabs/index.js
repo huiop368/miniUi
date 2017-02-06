@@ -8,6 +8,7 @@ export default class Tabs extends Component {
     static TabPanel = TabPanel;
 
     static propTypes = {
+        prefixCls           : PropTypes.string,
         activeKey           : PropTypes.string,
         defaultActiveKey    : PropTypes.string,
         onChange            : PropTypes.func,
