@@ -19,7 +19,9 @@ export default class MenuList extends Component {
 
         keys.forEach( key => {
             const obj = itemObj[key]
-            const arr = Object.keys(obj)
+            let arr = Object.keys(obj).sort()
+
+            arr = arr.concat(arr.splice(0,1))
 
             arr.map( (type, i) => {
                 const val = obj[type]

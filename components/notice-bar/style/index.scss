@@ -1,7 +1,9 @@
 @import '../../style/themes/default';
 @import '../../style/mixins';
 
-.t-notice-bar {
+$prefixCls : t-notice-bar;
+
+.#{$prefixCls}{
   background-color: $notice-bar-fill;
   height: $notice-bar-height;
   overflow: hidden;
