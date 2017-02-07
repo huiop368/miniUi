@@ -2,3 +2,59 @@
 @import '../../style/mixins';
 
 $prefixCls : t-tabbar;
+
+.#{$prefixCls}{
+    &-bar{
+        box-sizing: border-box;
+        height: $tab-bar-height;
+        border-top: $border-width-sm solid $border-color-base;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        background-color : $fill-base;
+        transition: bottom 0.2s;
+        @include box-sizing();
+        z-index: 100;
+
+        .#{$prefixCls}-tab{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+            &-image {
+                width: $icon-size-md;
+                height: $icon-size-md;
+                vertical-align: middle;
+            }
+            &-title {
+                font-size: $font-size-icontext;
+                margin: $v-spacing-xs 0 0 0;
+                line-height: 1;
+            }
+            &-icon {
+                display: flex;
+            }
+        }
+
+        .#{$prefixCls}-tab-active{
+            .#{$prefixCls}-tab-title{
+                color : $brand-primary;
+            }
+        }
+    }
+
+    &-content{
+        .#{$prefixCls}-panel{
+            overflow : auto;
+        }
+
+        .#{$prefixCls}-panel-inactive{
+            display : none;    
+        }
+
+    }
+}

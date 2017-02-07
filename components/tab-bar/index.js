@@ -77,7 +77,8 @@ export default class TabBar extends Component {
             
             const panelCls = classnames({
                 [`${prefixCls}-panel`] : true,
-                [`${prefixCls}-panel-active`] : isActive
+                [`${prefixCls}-panel-active`] : isActive,
+                [`${prefixCls}-panel-inactive`] : !isActive
             })
 
             panels.push(

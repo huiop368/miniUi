@@ -15,21 +15,27 @@ export default class TabBarItem extends Component {
     };
 
     render (){
-        const { prefixCls, className, badge, title, active, onTabClick } = this.props
+        const { prefixCls, className, badge, title, active, icon, selectedIcon, onTabClick } = this.props
 
         const allCls = classnames({
             [`${prefixCls}-tab`] : true,
             [`${prefixCls}-tab-active`] : active,
             [className] : !!className
         })
+
+        const iconRef = active ? selectedIcon : icon
+        const iconEl = React.isValidElement(iconRef) ? iconRef :
+                <img className={`${prefixCls}-tab-image`} src={iconRef.uri || iconRef} alt={title} />
+
         return (
             <div className={allCls} onClick={onTabClick}>
-                <div className={`${prefixCls}-icon`}>
+                <div className={`${prefixCls}-tab-icon`}>
                     { 
-                    //badge ? <Badge text={badge} className={`${prefixCls}-badge`}> {iconDom} </Badge> : iconDom
+                        iconEl
+                    //badge ? <Badge text={badge} className={`${prefixCls}-tab-badge`}> {iconDom} </Badge> : iconDom
                     }
                 </div>
-                <p className={`${prefixCls}-title`}>{title}</p>
+                <p className={`${prefixCls}-tab-title`}>{title}</p>
             </div>        
         )
     }
