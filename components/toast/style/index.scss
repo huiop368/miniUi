@@ -1,0 +1,51 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-toast;
+
+.#{$prefixCls}{
+    position: fixed;
+    width: 100%;
+    z-index: $toastZIndex;
+    font-size: $font-size-base;
+    text-align: center;
+
+    &.#{$prefixCls}-mask{
+        height: 100%;
+        @include display-box();
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top : 0;
+    }
+
+    &-notice {
+        width: auto;
+        vertical-align: middle;
+        position: absolute;
+        left: 50%;
+    }
+
+    &-notice-content {
+        position: relative;
+        right: 50%;
+        display: block;
+
+        .#{$prefixCls}-text{
+            min-width: 1.2rem;
+            border-radius: $radius-sm;
+            color: $color-text-base-inverse;
+            background-color: $fill-overlay-inverse;
+            line-height: 1.18;
+            padding: $v-spacing-md $h-spacing-lg;
+
+            .#{$prefixCls}-text-info {
+                margin-top: $v-spacing-sm;
+            }
+        }
+        .#{$prefixCls}-text-icon{
+            border-radius: $radius-lg;
+            padding: $v-spacing-lg $h-spacing-lg;
+        }
+    }
+}
