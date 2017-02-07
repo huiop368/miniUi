@@ -15,14 +15,15 @@ export default class TabBarItem extends Component {
     };
 
     render (){
-        const { prefixCls, className, badge, title } = this.props
+        const { prefixCls, className, badge, title, active, onTabClick } = this.props
 
         const allCls = classnames({
-            [prefixCls] : true,
+            [`${prefixCls}-tab`] : true,
+            [`${prefixCls}-tab-active`] : active,
             [className] : !!className
         })
         return (
-            <div className={allCls}>
+            <div className={allCls} onClick={onTabClick}>
                 <div className={`${prefixCls}-icon`}>
                     { 
                     //badge ? <Badge text={badge} className={`${prefixCls}-badge`}> {iconDom} </Badge> : iconDom
