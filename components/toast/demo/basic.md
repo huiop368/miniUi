@@ -10,11 +10,9 @@ import Toast from 'lib/toast'
 import 'lib/toast/style'
 
 class ToastExample extends React.Component {
-
   handleToastInfo (){
     Toast.info('这是一个toast提示!!!')   
   }
-
   render() {
     return (
         <div>
