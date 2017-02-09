@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Modal from './index';
+import React    from 'react'
+import ReactDOM from 'react-dom'
+import Modal    from './index'
 
 export default function(...args){
     const title = args[0]
@@ -18,8 +18,9 @@ export default function(...args){
         //@TODO setTimeout Hack for react error
         setTimeout(() => {
             ReactDOM.unmountComponentAtNode(div)
+            div.parentNode.removeChild(div)
+            div = null
         },0)
-        div.parentNode.removeChild(div)
     }
 
     const footer = btns.map(btn => {
