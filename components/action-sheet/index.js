@@ -73,7 +73,6 @@ const createActionSheet = (type, config, callback) => {
                 div.parentNode.removeChild(div)
                 div = null
             },0)
-            
         }
     }
 
