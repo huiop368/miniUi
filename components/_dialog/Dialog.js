@@ -39,7 +39,7 @@ export default class Dialog extends Component {
         
         return (
             <div className={`${prefixCls}-content`}>
-                { closable ? <span className={`${prefixCls}-close-x`}></span> : null }
+                { closable ? <span className={`${prefixCls}-close-x`} onClick={this.close}></span> : null }
                 { 
                     title ? 
                         <div className={`${prefixCls}-header`}>
@@ -61,28 +61,42 @@ export default class Dialog extends Component {
         )
     }
 
+    close = (e) => {
+        this.props.onClose(e)
+    }
+
+    handleMaskClick = (e) => {
+        if(!this.props.maskClosable) return
+
+        if(e.target === e.currentTarget){
+            this.close(e)
+        }
+    }
+
     render (){
-        let { prefixCls, className, visible, style } = this.props
+        let { prefixCls, className, visible, style, wrapProps } = this.props
 
         const allCls = classnames({
             [prefixCls] : true,
             [className] : !!className
         })
 
-        style = {display : visible ? null : 'none'}
+        let wrapStyle = {display : visible ? null : 'none'}
 
         return (
             <div>
                 {this.maskEl}
                 <div
-                style={style}
                 role="dialog"
-                className={`${prefixCls}-wrap`}>
-                    <div className={allCls}>
+                style={wrapStyle}
+                onClick={this.handleMaskClick}
+                className={`${prefixCls}-wrap`}
+                {...wrapProps}>
+                    <div className={allCls} style={style}>
                         {this.dialogEl}
                     </div>
                 </div>
-            </div>        
+            </div>
         )
     }
 }
