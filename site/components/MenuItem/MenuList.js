@@ -24,7 +24,7 @@ export default class MenuList extends Component {
             arr = arr.concat(arr.splice(0,1))
 
             arr.map( (type, i) => {
-                const val = obj[type]
+                const val = obj[type].sort((a,b) => a.english > b.english)
 
                 ret.push(
                     <MenuItem key={i} items={val} title={type} submenu />
