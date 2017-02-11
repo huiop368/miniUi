@@ -1,5 +1,6 @@
 import React, { Component, PropTypes, Children }  from 'react'
-import classnames                       from 'classnames'
+import Icon             from 'react-fa'
+import classnames       from 'classnames'
 
 export default class Panel extends Component {
 
@@ -31,10 +32,16 @@ export default class Panel extends Component {
             [`${prefixCls}-content-active`] : isActive
         })
 
+        const iconCls = classnames({
+            [`${prefixCls}-header-icon`] : true,
+            [`${prefixCls}-header-icon-reverse`] : isActive
+        })
+
         return (
             <div className={allCls}>
                 <div className={`${prefixCls}-header`} onClick={this.handleClickItem}>
                     {header}
+                    <Icon name="chevron-down" className={iconCls} />
                 </div>
 
                 <div className={conCls}>

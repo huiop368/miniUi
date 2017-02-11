@@ -1,5 +1,6 @@
 import React, { Component, PropTypes, Children }  from 'react'
-import classnames                       from 'classnames'
+import Icon         from 'react-fa'
+import classnames   from 'classnames'
 
 export default class NavBar extends Component {
 
@@ -30,7 +31,7 @@ export default class NavBar extends Component {
         return (
             <div className={allCls} style={style} {...props}>
                 <div className={`${prefixCls}-left`} onClick={onLeftClick}>
-                    {iconName ? <span className={`${prefixCls}-left-icon`}></span> : null}
+                    {iconName ? <Icon className={`${prefixCls}-left-icon`} name="chevron-left" /> : null}
                     <span className={`${prefixCls}-left-content`}>{leftContent}</span>
                 </div>
                 <div className={`${prefixCls}-title`}>{children}</div>

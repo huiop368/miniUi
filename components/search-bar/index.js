@@ -1,5 +1,6 @@
 import React, { Component, PropTypes, Children }  from 'react'
-import classnames                       from 'classnames'
+import Icon         from 'react-fa'
+import classnames   from 'classnames'
 
 export default class SearchBar extends Component {
 
@@ -175,6 +176,7 @@ export default class SearchBar extends Component {
                     //     </span>
                     // </div>
                     }
+                    <Icon className={`${prefixCls}-search-icon`} name="search" />
                     <input
                      type="search"
                      ref={node => this.inputNode = node}

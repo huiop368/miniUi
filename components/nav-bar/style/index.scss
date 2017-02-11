@@ -21,7 +21,7 @@ $navbar-height : 45px;
   &-left {
     margin-left: $h-spacing-lg;
     font-size: $link-button-font-size;
-    .#{$prefixCls}-icon {
+    &-icon {
       margin-right: $h-spacing-sm;
       display: inherit;
     }

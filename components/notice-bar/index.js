@@ -1,5 +1,6 @@
 import React, { Component, PropTypes, Children }  from 'react'
-import classnames                       from 'classnames'
+import Icon         from 'react-fa'
+import classnames   from 'classnames'
 
 export default class NoticeBar extends Component {
 
@@ -7,7 +8,7 @@ export default class NoticeBar extends Component {
         prefixCls   : PropTypes.string,
         className   : PropTypes.string,
         mode        : PropTypes.oneOf(['closable', 'link']),
-        type        : PropTypes.oneOf(['success', 'info', 'error', 'question']),
+        //type        : PropTypes.oneOf(['success', 'info', 'error', 'question']),
         onClick     : PropTypes.func
     };
 
@@ -48,21 +49,23 @@ export default class NoticeBar extends Component {
             'info' : '',
             'error' : '',
             'question' : '',
-            'closable' : '',
-            'link' : ''
+            'closable' : 'close',
+            'link' : 'chevron-right'
         }
 
         return (
             this.state.show ?
                 <div className={allCls} {...props}>
-                    <div className={`${prefixCls}-icon`}>
-                        <i type={type} name={type2name[type]} />
-                    </div>
+                    { type ? 
+                        <div className={`${prefixCls}-icon`}>
+                            <Icon name={type2name[type]} />
+                        </div> : null 
+                    }
                     <div className={`${prefixCls}-content`}>{ children }</div>
                     {
                     mode === 'closable' || mode === 'link' ?
                         <div className={`${prefixCls}-action`} onClick={this.handleClick}>
-                            <i type={mode} name={type2name[mode]}>ac</i>
+                            <Icon name={type2name[mode]} />
                         </div> : null
                     }
                 </div> : null

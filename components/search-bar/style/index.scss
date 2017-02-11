@@ -60,6 +60,7 @@ $prefix : t-search;
       font-size: $input-font-size;
       background-color: transparent;
       border: 0;
+      padding-left : 25px;
       @include border-radius($radius-sm);
       &::-webkit-input-placeholder {
         background: none;
@@ -97,6 +98,14 @@ $prefix : t-search;
     }
     flex: 1;
   }
+
+  &-search-icon{
+    font-size : $font-size-subhead;  
+    vertical-align : middle;
+    padding-left : 5px;
+    color : $color-text-placeholder;
+  }
+
   &-cancel {
     flex: none;
     opacity: 0;

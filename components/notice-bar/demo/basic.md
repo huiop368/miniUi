@@ -19,10 +19,10 @@ const NoticeBarExample = React.createClass({
           <NoticeBar>
             国庆期间余额宝收益和转出到账时间
           </NoticeBar>
-          <NoticeBar type="info" mode="closable">
+          <NoticeBar mode="closable">
             国庆期间余额宝收益和转出到账时间
           </NoticeBar>
-          <NoticeBar type="info" mode="link" onClick={this.onClick}>
+          <NoticeBar mode="link" onClick={this.onClick}>
             国庆期间余额宝收益和转出到账时间
           </NoticeBar>  
       </div>

@@ -1,33 +1,44 @@
 @import '../../style/themes/default';
 @import '../../style/mixins';
 
-$prefix : t-accordion;
+$prefixCls : t-accordion;
 
-.#{$prefix}{
+.#{$prefixCls}{
     
     &-item{
-        .#{$prefix}-header{
+        .#{$prefixCls}-header{
             position: relative;
-              color: $color-text-base;
-              font-size: $font-size-heading;
-              height: $list-item-height;
-              line-height: $list-item-height;
-              background-color: $fill-base;
-              box-sizing: content-box;
-              overflow: hidden;
-              padding-left: $h-spacing-lg;
-              padding-right: 2 * $h-spacing-lg;
-              @include hairline-bottom($border-color-base);
-              @include ellipsis();
+            color: $color-text-base;
+            font-size: $font-size-heading;
+            height: $list-item-height;
+            line-height: $list-item-height;
+            background-color: $fill-base;
+            box-sizing: content-box;
+            overflow: hidden;
+            padding-left: $h-spacing-lg;
+            padding-right: 2 * $h-spacing-lg;
+            @include hairline-bottom($border-color-base);
+            @include ellipsis();
+            &-icon{
+                position : absolute;    
+                top: $h-spacing-lg;
+                right: $h-spacing-lg;
+                font-size : $font-size-subhead;
+                color : $color-text-placeholder;
+                transition : all .2s ease-out;
+            }
+            &-icon-reverse{
+                transform : rotate(180deg)
+            }
         }
 
-        .#{$prefix}-content{
+        .#{$prefixCls}-content{
             overflow: auto;
             transition : all .3s ease;
             max-height : 0;
         }
 
-        .#{$prefix}-content-active{
+        .#{$prefixCls}-content-active{
             // 尽量设置了个较大的值，其实可以设置的更大
             max-height : 800px;
         }
