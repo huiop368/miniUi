@@ -13,7 +13,9 @@ class ActivityIndicatorExample extends React.Component {
   render() {
     return (
         <div>
-            <ActivityIndicator />
+            <ActivityIndicator text="Loading..." />
+            <p />
+            <ActivityIndicator size="large" text="Loading..." />
         </div>
     )
   }
