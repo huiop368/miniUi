@@ -37,13 +37,20 @@ export default class ActivityIndicator extends Component {
         })
 
         let sizeProps = {size : 'lg'}
-        if(size === 'large'){
+        if(size === 'large' || !!toast){
             sizeProps = { size : '2x'}
         }
 
         if(animating){
             if(toast){
-            
+                return (
+                    <div className={allCls}>
+                        <div className={`${prefixCls}-content`}>
+                            <Icon name="circle-o-notch" className={iconCls} spin {...sizeProps} />
+                            {text ? <span className={`${prefixCls}-toast-tip`}>{text}</span> : null}
+                        </div>
+                    </div>        
+                )
             }else{
                 return (
                     <div className={allCls}>

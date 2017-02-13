@@ -16,6 +16,7 @@ class ActivityIndicatorExample extends React.Component {
             <ActivityIndicator text="Loading..." />
             <p />
             <ActivityIndicator size="large" text="Loading..." />
+            <ActivityIndicator toast text="正在加载" />
         </div>
     )
   }
