@@ -1,9 +1,9 @@
 @import '../../style/themes/default';
 @import '../../style/mixins';
 
-$prefix : t-search;
+$prefixCls : t-search;
 
-.#{$prefix} {
+.#{$prefixCls} {
   position: relative;
   display: flex;
   align-items: center;
@@ -18,13 +18,13 @@ $prefix : t-search;
     overflow: hidden;
     background-color: $fill-base;
     @include border-radius($radius-sm);
-    .#{$prefix}-ph,
+    .#{$prefixCls}-ph,
     input[type="search"] {
       position: absolute;
       top: 0;
       left: 0;
     }
-    .#{$prefix}-ph {
+    .#{$prefixCls}-ph {
       z-index: 1;
       height: $search-bar-input-height;
       line-height: $search-bar-input-height;
@@ -74,7 +74,7 @@ $prefix : t-search;
         -webkit-appearance: none;
       }
     }
-    .#{$prefix}-clear {
+    .#{$prefixCls}-clear {
       position: absolute;
       z-index: 3;
       width: $icon-size-xxs;

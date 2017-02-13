@@ -1,0 +1,12 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-star;
+
+.#{$prefixCls}{
+    
+    &-star-icon{
+        color : #fa5;
+        margin-right : $h-spacing-sm / 2;
+    }
+}
