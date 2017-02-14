@@ -58,6 +58,7 @@ export default class Button extends Component {
             [className] : !!className,
             [prefixCls] : true,
             [`${prefixCls}-primary`]: type === 'primary',
+            [`${prefixCls}-ghost`]: type === 'ghost',
             [`${prefixCls}-small`]: size === 'small',
             [`${prefixCls}-loading`]: loading,
             [`${prefixCls}-inline`]: inline,

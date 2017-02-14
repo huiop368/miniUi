@@ -18,6 +18,6 @@ source: design
 |------------|----------------|--------------------|--------------|
 | type       | 按钮类型，可选值为`primary`/`ghost`/`warning`或者不设     |   string   |   -  |
 | size       | 设置按钮大小，可选值为`large`、`small` | string | `large`|
-| activeStyle  | 禁止点击反馈效果(设为 false)，也可设置为自己的点击 style | false/{} | {} |
+| inline     | 设置是否内联    ｜boolean | fasle |
 | disabled   | 是否不可用      | boolean |    false  |
 | onClick    | 点击按钮的回调函数 | (e: Object): void |   无  |

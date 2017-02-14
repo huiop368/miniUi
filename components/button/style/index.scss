@@ -1,48 +1,65 @@
 @import '../../style/themes/default';
+@import '../../style/mixins';
 
-.t-button{
-    width: 100%;
+$prefixCls: t-button;
+
+.#{$prefixCls}{
     display: inline-block;
+    width: 100%;
     outline: 0 none;
-    appearance: none;
-    box-sizing: border-box;
+    -webkit-appearance: none;
+    @include box-sizing();
     padding: 0;
     text-align: center;
-    font-size: 18px;
-    height: 42px;
-    line-height: 42px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-clip: padding-box;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    font-size: $button-font-size;
+    height: $button-height;
+    line-height: $button-height;
+    @include border-radius($radius-md);
+
+    color: $color-text-base;
+    background-color: $fill-base;
+    border: $border-width-sm solid $border-color-base;
 
     &:active{
-        background-color : #eee;   
+        background-color : $fill-tap;   
     }
-}
 
-.t-button-primary{
-    color: #fff;
-    background-color: #108ee9;
-    border: 1px solid #108ee9;
-
-    &:active{
-        
+    &-primary{
+        color: $color-text-base-inverse;
+        background-color: $primary-button-fill;
+        border: $border-width-sm solid $primary-button-fill;
+        &:active{
+            background-color: $primary-button-fill-tap;
+        }
     }
-}
 
-.t-button-small{
+    &-ghost{
+        color: $ghost-button-color;
+        background-color: transparent;
+        border: $border-width-sm solid $ghost-button-color;
+        &:active{
+            color: $color-text-base-inverse;
+            background-color: $ghost-button-fill-tap;
+            border: $border-width-sm solid $ghost-button-color; 
+        }
+    }
 
-}
+    &-inline{
+        width : auto;
+        padding: 0 $h-spacing-lg; 
+    }
 
-.t-button-disabled{
-    
-}
+    &-small{
+        font-size: $button-font-size-sm;
+        height: $button-height-sm;
+        line-height: $button-height-sm;
+        @include border-radius($radius-md);
+        padding: 0 $h-spacing-lg;
+    }
 
-.t-button-inline{
-    
+    &-disabled{
+        color: $color-text-disabled;
+        background-color: $fill-disabled;
+        border: 0; 
+    }
 }
