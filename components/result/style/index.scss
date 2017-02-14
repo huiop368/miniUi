@@ -1,0 +1,20 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-result;
+
+.#{$prefixCls}{
+    padding-top: $result-padding-top;
+    text-align: center;
+
+    &-title{
+        margin-top: $v-spacing-lg;
+        font-size: $font-size-display-sm;
+    }
+
+    &-message{
+        margin-top: $v-spacing-md;
+        font-size: $font-size-caption;
+        color: $color-text-caption;
+    }
+}
