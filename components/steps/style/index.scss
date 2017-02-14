@@ -1,0 +1,134 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-steps;
+
+.#{$prefixCls}{
+    
+    &-item{
+        position : relative; 
+        &-header{
+           position : relative; 
+           box-sizing: border-box;
+           width: 24px;
+           height: 24px;
+           line-height: 24px;
+           text-align: center;
+           border-radius: 24px;
+           font-size: 14px;
+           color: $color-text-base-inverse;
+           &-icon{
+              position: absolute;
+              top: 3px;
+              right: 8px;
+              z-index: 999;
+              width: 5px;
+              height: 11px;
+              border-style: solid;
+              border-width: 0 1px 1px 0;
+              border-color: $color-text-base-inverse;
+              content: '\0020';
+              @include transform(rotate(45deg));
+           }
+        }
+
+        &-content{
+            font-size: $font-size-subhead;
+        }
+
+        &-eli{
+            height: 15px;
+            background-image : radial-gradient(circle, $brand-primary, $brand-primary 2px, transparent 2px, transparent);
+            background-size : 10px 25px;   
+            position : absolute;
+            width : calc(100% - 24px);
+            left : 24px;
+        }
+
+        &-finish{
+            .#{$prefixCls}-item-header{
+                background-color : $brand-primary;
+            }
+            .#{$prefixCls}-item-content{
+                color: $brand-primary;
+            }
+        }
+
+        &-process,
+        &-wait{
+            .#{$prefixCls}-item-eli{
+                background-image : radial-gradient(circle, $color-text-placeholder, $color-text-placeholder 2px, transparent 2px, transparent);
+            }
+        }
+
+        &-process{
+            .#{$prefixCls}-item-header{
+                background-color : $brand-primary;
+            }
+
+            .#{$prefixCls}-item-content{
+                color: $brand-primary;
+            }
+        }
+
+        &-wait{
+            .#{$prefixCls}-item-header{
+                background-color : $color-text-placeholder;
+            }
+
+            .#{$prefixCls}-item-content{
+                color: $color-text-placeholder;
+            }
+        }
+    }
+
+    &.#{$prefixCls}-large{
+        .#{$prefixCls}-item-header{
+           width: 36px;
+           height: 36px;
+           line-height: 36px;
+           text-align: center;
+           border-radius: 36px;
+           font-size: 18px;
+
+           &-icon{
+              top: 5px;
+              right: 12px;
+              width: 8px;
+              height: 18px;
+              border-style: solid;
+              border-width: 0 2px 2px 0;
+           }
+        }
+
+        .#{$prefixCls}-item-eli{
+            height: 22px;
+            background-image : radial-gradient(circle, $brand-primary, $brand-primary 4px, transparent 4px, transparent);
+            background-size : 15px 35px;   
+            //width : calc(100% - 24px);
+            left : 36px;
+        }
+
+        .#{$prefixCls}-item-process,
+        .#{$prefixCls}-item-wait{
+            .#{$prefixCls}-item-eli{
+                background-image : radial-gradient(circle, $color-text-placeholder, $color-text-placeholder 4px, transparent 4px, transparent);
+            }
+        }
+
+        .#{$prefixCls}-item-content{
+            font-size : $font-size-display-sm;
+        }
+    }
+
+    &-horizontal{
+        display: flex;
+        .#{$prefixCls}-item{
+            &:nth-child(1){
+            }
+            &:not(:last-child){
+                flex : 1;
+            }
+        }
+    }
+}
