@@ -22,10 +22,11 @@ export default class ListItem extends Component {
 
     static defaultProps = {
         prefixCls   : 't-list',
-        align: 'middle',
-        error: false,
+        align       : 'middle',
+        error       : false,
         multipleLine: false,
-        wrap: false
+        wrap        : false,
+        onClick     : () => {}
     };
 
     get thumb(){
@@ -62,7 +63,7 @@ export default class ListItem extends Component {
         })
 
         return (
-            <div className={allCls} {...props}>
+            <div className={allCls} onClick={onClick} {...props}>
                 {this.thumb}
                 <div className={lineCls}>
                     { children ? <div className={`${prefixCls}-content`}>{children}</div> : null }

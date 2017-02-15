@@ -8,7 +8,7 @@ export default class NoticeBar extends Component {
         prefixCls   : PropTypes.string,
         className   : PropTypes.string,
         mode        : PropTypes.oneOf(['closable', 'link']),
-        //type        : PropTypes.oneOf(['success', 'info', 'error', 'question']),
+        type        : PropTypes.oneOf(['success', 'info', 'error', 'question']),
         onClick     : PropTypes.func
     };
 
@@ -45,10 +45,10 @@ export default class NoticeBar extends Component {
         })
 
         const type2name = {
-            'success' : '',
-            'info' : '',
-            'error' : '',
-            'question' : '',
+            'success' : 'check-circle',
+            'info' : 'info-circle',
+            'error' : 'times-circle',
+            'question' : 'question-circle',
             'closable' : 'close',
             'link' : 'chevron-right'
         }

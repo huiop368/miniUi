@@ -49,6 +49,7 @@ $prefixCls: t-list;
   overflow: hidden;
   @include box-align();
   transition: background-color 200ms;
+
   &.#{$prefixCls}-item-top {
     .#{prefixCls}-line {
       @include box-align(flex-start);
@@ -57,16 +58,19 @@ $prefixCls: t-list;
       }
     }
   }
+
   &.#{$prefixCls}-item-middle {
     .#{$prefixCls}-line {
       @include box-align(center);
     }
   }
+
   &.#{$prefixCls}-item-bottom {
     .#{$prefixCls}-line {
       @include box-align(flex-end);
     }
   }
+
   &.#{$prefixCls}-item-error {
     .#{$prefixCls}-line {
       .#{$prefixCls}-extra {
@@ -77,9 +81,11 @@ $prefixCls: t-list;
       }
     }
   }
+
   &.#{$prefixCls}-item-active {
     background-color: $fill-tap;
   }
+  
   &-disabled {
     .#{$prefixCls}-line {
       .#{$prefixCls}-content,
@@ -126,7 +132,7 @@ $prefixCls: t-list;
     .#{$prefixCls}-extra {
       flex-basis: 36%;
       color: $color-text-caption;
-      font-size: 16px; // 视觉要求先暂时写死
+      font-size: 16px;
       line-height: 1.2;
       text-align: right;
       @include ellipsis();
@@ -150,7 +156,7 @@ $prefixCls: t-list;
       width: $icon-size-xxs;
       height: $icon-size-xxs;
       margin-left: $h-spacing-md;
-      //@include encoded-svg-background('right');
+      @include encoded-svg-background($svg-bg-right);
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50% 50%;
