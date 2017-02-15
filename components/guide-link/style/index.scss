@@ -1,0 +1,21 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls: t-guide-link;
+
+.#{$prefixCls}{
+    font-size:$font-size-base; 
+    color: $color-text-disabled;
+
+    &-href{
+        color: $color-text-disabled;
+    }
+
+    &-icon-left{
+        margin-right: $h-spacing-sm;  
+    }
+
+    &-icon-right{
+        margin-left: $h-spacing-sm;
+    }
+}
