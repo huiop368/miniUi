@@ -6,7 +6,11 @@ $prefixCls : t-star;
 .#{$prefixCls}{
     
     &-star-icon{
-        color : #fa5;
-        margin-right : $h-spacing-sm / 2;
+        color: $star-color;
+        margin-right: $h-spacing-sm / 2;
+    }
+    
+    &-star-o{
+       color: $color-text-placeholder; 
     }
 }

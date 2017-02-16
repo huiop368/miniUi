@@ -90,7 +90,7 @@ export default class Star extends Component {
                         return (
                             <Icon
                              {...sizeProps}
-                             name={isActive ? "star" : "star-o"}
+                             name="star"
                              onClick={() => this.handleClickStar(i)}
                              className={iconCls}
                              key={i} />
