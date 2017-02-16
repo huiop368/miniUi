@@ -10,19 +10,13 @@ import Stepper from 'lib/stepper'
 import 'lib/stepper/style'
 
 class StepperExample extends React.Component {
-  constructor (props){
-    super(props)
-    this.state = {
-        checked : false    
-    }
-    this.onChange = this.onChange.bind(this)
-  }
-  onChange(checked) {
-      this.setState({checked : !this.state.checked})
-  }
   render() {
     return (
-        <Stepper />
+        <div>
+            <Stepper />
+            <Stepper step={2} />
+            <Stepper value={1000} disabled />
+        </div>
     )
   }
 }

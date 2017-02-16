@@ -10,33 +10,39 @@ $prefixCls : t-stepper;
         width : 30px;
         height : 30px;
         line-height : 30px;
-        border : 1px solid #ccc;
+        border : $border-width-sm solid $color-text-placeholder;
         border-radius : 30px;
         text-align : center;
-    }
-
-    &-hand-down{
-       &:after{
-           content : '-'; 
-       } 
-    }
-
-    &-hand-up{
-       &:after{
-           content : '+'; 
-       }
+        font-size: $font-size-subhead;
+        color : $color-text-paragraph;
     }
 
     &-hand-down-disabled,
     &-hand-up-disabled{
-        opacity : .3;       
+        opacity : .3;
     }
 
-    &-value{
+    &-value-wrap{
         display : inline-block;
-        width : 60px;
+        min-width : 60px;
         vertical-align : middle;
         user-select : none;
         text-align : center;
+    }
+
+    &-value{
+        
+    }
+
+    &-unit{
+        
+    }
+
+    &-disabled{
+        opacity : .3;
+        .#{$prefixCls}-hand-down-disabled,
+        .#{$prefixCls}-hand-up-disabled{
+            opacity : 1;
+        }
     }
 }

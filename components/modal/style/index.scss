@@ -87,10 +87,13 @@ $prefixCls : t-modal;
     background-color: transparent;
     outline: none;
     position: absolute;
-    right: $h-spacing-lg;
+    left: $h-spacing-lg;
     z-index: 999;
-    height: $icon-size-sm;
-    width: $icon-size-sm;
+    height: $icon-size-xxs;
+    width: $icon-size-xxs;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include encoded-svg-background($svg-bg-modal_delete);
     // &-x {
     //   display: inline-block;
     //   width: 30px;

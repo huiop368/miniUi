@@ -20,7 +20,8 @@ export default class NavBar extends Component {
     };
 
     render (){
-        const { prefixCls, className, style, mode, iconName, children, rightContent, leftContent, onLeftClick, ...props } = this.props
+        const { prefixCls, className, style, mode, iconName, children,
+                rightContent, leftContent, onLeftClick, ...props } = this.props
 
         const allCls = classnames({
             [prefixCls] : true,
@@ -28,10 +29,14 @@ export default class NavBar extends Component {
             [`${prefixCls}-${mode}`] : true
         })
 
+        const nameMap = {
+            'left' : 'chevron-left'
+        }
+
         return (
             <div className={allCls} style={style} {...props}>
                 <div className={`${prefixCls}-left`} onClick={onLeftClick}>
-                    {iconName ? <Icon className={`${prefixCls}-left-icon`} name="chevron-left" /> : null}
+                    {iconName ? <Icon className={`${prefixCls}-left-icon`} name={nameMap[iconName]} /> : null}
                     <span className={`${prefixCls}-left-content`}>{leftContent}</span>
                 </div>
                 <div className={`${prefixCls}-title`}>{children}</div>
