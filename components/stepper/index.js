@@ -67,13 +67,15 @@ export default class Stepper extends Component {
     }
 
     setValue (v){
-        if( !('value' in this.props)){
-            this.setState({
-                inputValue : this.normalizeValue(v)
-            })
-        }
+        if(this.state.inputValue !== v){
+            if( !('value' in this.props)){
+                this.setState({
+                    inputValue : this.normalizeValue(v)
+                })
+            }
 
-        this.props.onChange(v)
+            this.props.onChange(v)
+        }
     }
 
     normalizeValue (v){
