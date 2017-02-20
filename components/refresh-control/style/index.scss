@@ -1,0 +1,85 @@
+@import '../../style/themes/default';
+@import '../../style/mixins';
+
+$prefixCls : t-refresh-control;
+
+.#{$prefixCls}{
+    position : relative;
+
+    &-header{
+        position : absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align : center;
+        height : 50px;
+        line-height : 50px;
+        opacity : 1;
+        color : $color-text-caption;
+        font-size : $font-size-base;
+    }
+
+    &-reset{
+        .#{$prefixCls}-header{
+            transition: height 0s .2s;
+        }
+    }
+
+    &-init,
+    &-reset{
+        .#{$prefixCls}-header{
+            height : 0;
+            opacity : 0;
+        }
+    }
+
+    &-msg-icon{
+        transition : transform .2s;    
+    }
+
+    &-pulling-enough{
+        .#{$prefixCls}-msg-icon{
+            transform : rotate(180deg)
+        }
+    }
+
+    &-refreshing{
+        .#{$prefixCls}-body{
+            transform: translate3d(0,50px,0);
+            transition: transform .2s; 
+        }
+    }
+
+    &-refreshed{
+        .#{$prefixCls}-header{
+            color : #579B08;
+        }
+        .#{$prefixCls}-body{
+            animation: refreshed .4s;
+        }
+    }
+
+    &-error{
+        .#{$prefixCls}-header{
+            color : #D0011B;
+        }
+        .#{$prefixCls}-body{
+            animation: refreshed .4s;
+        }
+    }
+
+    @keyframes refreshed {
+        0%{transform: translate3d(0,50px,0);}
+        50%{transform: translate3d(0,50px,0);}
+    }
+
+    
+
+    &-loading{
+       line-height : 50px; 
+    }
+
+    &-txt{
+       margin-left : $h-spacing-md; 
+    }
+}
