@@ -27,11 +27,15 @@ class BadgeExample extends React.Component {
             </Badge>
             <p />
             <Badge text="角标" corner>
-                <span style={{ width: '80px', height: '60px', background: '#ddd', display: 'inline-block' }} />
+                <span style={{ width: '120px', height: '60px', background: '#ddd', display: 'inline-block' }} />
             </Badge>
             <p />
             <Badge text="角标" corner>
                 <span style={{ width: '90px', height: '90px', background: '#ddd', display: 'inline-block' }} />
+            </Badge>
+            <p />
+            <Badge text="角标" corner>
+                <span style={{ width: '60px', height: '90px', background: '#ddd', display: 'inline-block' }} />
             </Badge>
         </div>
     )

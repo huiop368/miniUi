@@ -22,14 +22,17 @@ export default class Badge extends Component {
     componentDidMount (){
         if(this.props.corner){
             setTimeout( () => {
+                //@ 这里的公式还是有问题
                 const width = this.refs.badge.offsetWidth
                 const height = this.refs.badge.offsetHeight
                 const sup = this.refs.sup
                 const h = Math.ceil((height/width) * (width/4))
+                const w = Math[width > height ? 'min' : 'max'](height,width) 
 
-                sup.style.width = `${width}px`
+                //@ width & right 改成用${height}计算
+                sup.style.width = `${w}px`     
                 sup.style.top = `${height/2-9-h}px`
-                sup.style.right = `-${width/4}px`
+                sup.style.right = `-${w/4}px`
             }, 30)
         }
     }
